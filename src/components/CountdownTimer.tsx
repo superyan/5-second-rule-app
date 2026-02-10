@@ -4,8 +4,6 @@ import { Play, X } from 'lucide-react';
 export default function CountdownTimer() {
   const { isCountingDown, countdownValue, startCountdown, cancelCountdown } = useStore();
 
-  const numbers = ['5', '4', '3', '2', '1', 'ACTION!'];
-
   return (
     <div className="flex flex-col items-center justify-center space-y-6 py-8">
       {/* 倒计时数字 */}

@@ -12,8 +12,7 @@ export default function WeeklyChart() {
       <h3 className="text-lg font-semibold text-white mb-4">最近7天</h3>
 
       <div className="space-y-3">
-        {weeklyStats.map((stat, index) => {
-          const height = maxActions > 0 ? (stat.total / maxActions) * 100 : 0;
+        {weeklyStats.map((stat) => {
           const dateLabel = format(new Date(stat.date), 'MM/dd', { locale: zhCN });
 
           return (

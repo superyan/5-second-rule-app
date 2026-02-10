@@ -33,8 +33,8 @@ export async function getTodayActions(): Promise<Action[]> {
 }
 
 // 添加行动记录
-export async function addAction(action: Omit<Action, 'id'>): Promise<number> {
-  return await db.actions.add(action);
+export async function addAction(action: Omit<Action, 'id'>): Promise<void> {
+  await db.actions.add(action);
 }
 
 // 获取指定日期范围的统计数据
